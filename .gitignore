@@ -1,3 +1,26 @@
 *
 !.gitignore
 
+
+!alacritty/
+!alacritty/*
+!bash/
+!bash/*
+!lf/
+!lf/*
+!neofetch
+!neofetch/*
+!nvim/
+!nvim/*
+nvim/lazy-lock.json
+!nvim/lua/*
+!nvim/lua/core/*
+!nvim/lua/plugins/*
+!vim/
+!vim/*
+!xonsh/
+!xonsh/*
+
+
+
+

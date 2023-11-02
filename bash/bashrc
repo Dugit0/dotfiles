@@ -1,0 +1,10 @@
+export EDITOR='nvim'
+export VISUAL='nvim'
+
+LFCD="/home/dmitry/.config/lf/lfcd.sh"
+if [ -f "$LFCD" ]; then
+    source "$LFCD"
+fi
+
+
+source ~/.config/bash/aliases.sh

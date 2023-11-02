@@ -1,0 +1,139 @@
+" То, что необходимо допилить:
+" Если курсор находится перед ), не ставить ), а перемещаться на один символ вправо.
+" Если нахожусь в начале (конце) строки, при нажатии 'стрелка влево' или h ('стрелка вправо' или l)
+" переходить в конец предыдущей (начало следующей) строки.
+" Сменить раскладку так, чтобы в Caps Lock были буквы 'хъжэбю'
+"
+"
+" Default config start at 9 string
+" Plugins config start at 105 string
+" My config start at 150 string
+"
+"
+" 
+"========= START default vim config ==========
+
+if v:progname =~? "evim"
+  finish
+endif
+
+if exists('skip_defaults_vim') 
+  finish
+endif
+
+if &compatible
+  set nocompatible
+endif
+
+silent! while 0
+  set nocompatible
+silent! endwhile
+
+set backspace=indent,eol,start
+
+set history=200		" keep 200 lines of command line history
+set ruler		" show the cursor position all the time
+set showcmd		" display incomplete commands
+set wildmenu		" display completion matches in a status line
+
+set ttimeout		" time out for key codes
+set ttimeoutlen=100	" wait up to 100ms after Esc for special key
+
+set display=truncate
+
+set scrolloff=5
+
+if has('reltime')
+  set incsearch
+endif
+
+set nrformats-=octal
+
+if has('win32')
+  set guioptions-=t
+endif
+
+map Q gq
+
+inoremap <C-U> <C-G>u<C-U>
+
+if has('mouse')
+  if &term =~ 'xterm'
+    set mouse=a
+  else
+    set mouse=nvi
+  endif
+endif
+
+if 1
+
+  filetype plugin indent on
+
+  augroup vimStartup
+    au!
+
+    autocmd BufReadPost *
+      \ if line("'\"") >= 1 && line("'\"") <= line("$") && &ft !~# 'commit'
+      \ |   exe "normal! g`\""
+      \ | endif
+
+  augroup END
+
+  augroup vimHints
+    au!
+    autocmd CmdwinEnter *
+	  \ echohl Todo | 
+	  \ echo 'You discovered the command-line window! You can close it with ":q".' |
+	  \ echohl None
+  augroup END
+
+endif
+
+if &t_Co > 2 || has("gui_running")
+  syntax on
+
+  let c_comment_strings=1
+endif
+
+if !exists(":DiffOrig")
+  command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
+		  \ | wincmd p | diffthis
+endif
+
+if has('langmap') && exists('+langremap')
+  set nolangremap
+endif
+"========= END default vim config ==========
+
+
+
+"========= START plugins config ==========
+source ~/.config/vim/plug
+"========= END plugins config ==========
+
+"========= START my config ==========
+source ~/.config/vim/my_settings
+"========= END my config ==========
+
+
+
+" note:
+" - you can always use (:help <something>) command to read what
+"   vim can tell you about <something>
+" - you can view current themes available for vim by typing 'colorscheme '
+"   and tabbing
+" - you can view current themes available for vim by typing 'AirlineTheme '
+"   and tabbing
+" - you can view a large set of vim themes and search through them by 
+"   filters https://vimcolorschemes.com/ (link is clickable)
+" - plugin commands start with a big letter (e.g. CocInstall)
+" - to install something in Coc (Coc is a great autocomplete manager)
+"   you can type (CocInstall <smth_to_install>)
+" - LSP, or Language Server Protocol is a thing that makes possible semantic
+"   language autocomplete, autocomplete of language structures, objects, etc.
+" - you already have 'coc-clangd' installed, it is a language server for
+"   The C Programming Language
+" - you can view available language servers at
+"   https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features
+"   there tou can also read about the process of installation via the JSON
+"   config as well as CocInstall installation candidate
