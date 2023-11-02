@@ -1,16 +1,3 @@
-" То, что необходимо допилить:
-" Если курсор находится перед ), не ставить ), а перемещаться на один символ вправо.
-" Если нахожусь в начале (конце) строки, при нажатии 'стрелка влево' или h ('стрелка вправо' или l)
-" переходить в конец предыдущей (начало следующей) строки.
-" Сменить раскладку так, чтобы в Caps Lock были буквы 'хъжэбю'
-"
-"
-" Default config start at 9 string
-" Plugins config start at 105 string
-" My config start at 150 string
-"
-"
-" 
 "========= START default vim config ==========
 
 if v:progname =~? "evim"
@@ -108,32 +95,10 @@ endif
 
 
 "========= START plugins config ==========
-source ~/.config/vim/plug
+source ~/.config/vim/plug.vim
 "========= END plugins config ==========
 
 "========= START my config ==========
-source ~/.config/vim/my_settings
+source ~/.config/vim/my_settings.vim
 "========= END my config ==========
 
-
-
-" note:
-" - you can always use (:help <something>) command to read what
-"   vim can tell you about <something>
-" - you can view current themes available for vim by typing 'colorscheme '
-"   and tabbing
-" - you can view current themes available for vim by typing 'AirlineTheme '
-"   and tabbing
-" - you can view a large set of vim themes and search through them by 
-"   filters https://vimcolorschemes.com/ (link is clickable)
-" - plugin commands start with a big letter (e.g. CocInstall)
-" - to install something in Coc (Coc is a great autocomplete manager)
-"   you can type (CocInstall <smth_to_install>)
-" - LSP, or Language Server Protocol is a thing that makes possible semantic
-"   language autocomplete, autocomplete of language structures, objects, etc.
-" - you already have 'coc-clangd' installed, it is a language server for
-"   The C Programming Language
-" - you can view available language servers at
-"   https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features
-"   there tou can also read about the process of installation via the JSON
-"   config as well as CocInstall installation candidate

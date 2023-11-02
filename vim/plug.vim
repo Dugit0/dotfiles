@@ -6,12 +6,12 @@ call plug#begin('~/.vim/plugged')
 "Plug 'neoclide/coc.nvim', {'branch': 'release'} " connect coc.vim - autocomplete plugin and manager
 "Plug 'tpope/vim-fugitive'                       " git helper + branch display bottom left
 "Plug 'jreybert/vimagit'                         " git manager
-Plug 'ycm-core/YouCompleteMe'                    " autocomplete plugin
+" Plug 'ycm-core/YouCompleteMe'                    " autocomplete plugin
 Plug 'vim-airline/vim-airline'                   " nice bar in the bottom of vim (infobar)
 Plug 'tpope/vim-surround'                        " for surround in LaTeX or HTML
 Plug 'tpope/vim-commentary'                      " for fast commentary
 " Plug 'puremourning/vimspector'                   " debugger
-Plug 'lervag/vimtex'
+" Plug 'lervag/vimtex'
 
 
 
@@ -39,8 +39,8 @@ let g:gruvbox_contrast_dark = "hard"  " set gruvbox contrast
 
 
 " settings for YouCompleteMe plugin
-set completeopt-=preview
-let g:ycm_add_preview_to_completeopt = 0
+" set completeopt-=preview
+" let g:ycm_add_preview_to_completeopt = 0
 
 
 
@@ -50,10 +50,10 @@ let g:ycm_add_preview_to_completeopt = 0
 
 
 " settings for vimtex
-filetype plugin indent on
-syntax enable
-let g:vimtex_view_method='zathura'
-let g:vimtex_compiler_method = 'tectonic'
+" filetype plugin indent on
+" syntax enable
+" let g:vimtex_view_method='zathura'
+" let g:vimtex_compiler_method = 'tectonic'
 " let g:tex_flavor='latex'
 " let g:vimtex_quickfix_mode=0
 " set conceallevel=1
