@@ -1,7 +1,10 @@
 export EDITOR='nvim'
 export VISUAL='nvim'
 
-LFCD="/home/dmitry/.config/lf/lfcd.sh"
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+LFCD="$HOME/.config/lf/lfcd.sh"
 if [ -f "$LFCD" ]; then
     source "$LFCD"
 fi
