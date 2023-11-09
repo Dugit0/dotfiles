@@ -9,5 +9,10 @@ if [ -f "$LFCD" ]; then
     source "$LFCD"
 fi
 
-
 source ~/.config/bash/aliases.sh
+
+CUR_MACH_SETTINGS="$HOME/.config/bash/current_machine_settings.sh"
+if [ ! -e "$CUR_MACH_SETTINGS" ]; then
+    touch "$CUR_MACH_SETTINGS"
+fi
+source "$CUR_MACH_SETTINGS"
