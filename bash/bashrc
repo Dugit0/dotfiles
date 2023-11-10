@@ -16,3 +16,7 @@ if [ ! -e "$CUR_MACH_SETTINGS" ]; then
     touch "$CUR_MACH_SETTINGS"
 fi
 source "$CUR_MACH_SETTINGS"
+
+if [ -f "$HOME/Prog/gitstatus/gitstatus.prompt.sh" ]; then
+    source "$HOME/Prog/gitstatus/gitstatus.prompt.sh"
+fi
