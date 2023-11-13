@@ -97,7 +97,9 @@ require("lazy").setup({
             -- or leave it empty to use the default settings
             -- refer to the configuration section below
         }
-    }
+    },
+    -- Syntax for Lark (.lark) (parsing lib for Python)
+    {'lark-parser/vim-lark-syntax'}
     
 })
 
