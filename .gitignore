@@ -6,6 +6,7 @@
 !alacritty/*
 !bash/
 !bash/*
+!bash/scripts/*
 bash/current_machine_settings.sh
 !lf/
 !lf/*
