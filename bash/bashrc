@@ -11,12 +11,24 @@ fi
 
 source ~/.config/bash/aliases.sh
 
+if [ -f "$HOME/Prog/gitstatus/gitstatus.prompt.sh" ]; then
+    source "$HOME/Prog/gitstatus/gitstatus.prompt.sh"
+fi
+
+
+
+
+
+
+
+
+
+
+
+
+# Должно быть в самом конце, чтобы перебивать настройки текущего конфига
 CUR_MACH_SETTINGS="$HOME/.config/bash/current_machine_settings.sh"
 if [ ! -e "$CUR_MACH_SETTINGS" ]; then
     touch "$CUR_MACH_SETTINGS"
 fi
 source "$CUR_MACH_SETTINGS"
-
-if [ -f "$HOME/Prog/gitstatus/gitstatus.prompt.sh" ]; then
-    source "$HOME/Prog/gitstatus/gitstatus.prompt.sh"
-fi
