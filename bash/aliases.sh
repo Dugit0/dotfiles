@@ -12,6 +12,7 @@ alias dcd='cd "$(cat ~/.scripts/data/cur_dir.txt)"'
 alias venv_source='source ./venv/bin/activate'
 alias bash_source='source ~/.bashrc'
 alias cmcmkcontest='python3 ~/.config/bash/scripts/gen_contest_files.py'
+alias cmctest='~/.config/bash/scripts/cmctest.sh'
 # alias cmcmkproblem='python3 ~/.config/bash/scripts/gen_problem_files.py'
 # alias cmcmktests='python3 ~/.config/bash/scripts/gen_tests_files.py'
 
