@@ -24,9 +24,10 @@ function cmcML() {
 function cmcgcc_omp() {
     outfile=${1%%.*}
     echo ${outfile}
-    gcc -fopenmp -O2 -std=gnu18 -Wall -Wno-pointer-sign -Werror=vla -o ${outfile} ${1}
+    gcc -fopenmp -O2 -std=gnu18 -Wall -Wno-pointer-sign -Werror=vla -lm -o ${outfile} ${1}
 }
 
+alias cmcprintgcc='gcc -fopenmp -O2 -std=gnu18 -Wall -Wno-pointer-sign -Werror=vla -lm'
 
 # alias cmcprintgcc='echo "gcc -m32 -fsanitize=address,undefined,signed-integer-overflow -O2 -std=gnu18 -Wall -Werror -Wno-pointer-sign -Werror=vla -lm"'
 
