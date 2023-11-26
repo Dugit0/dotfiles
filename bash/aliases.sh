@@ -21,6 +21,13 @@ function cmcML() {
     source 'venv/bin/activate'
 }
 
+function cmcgcc_omp() {
+    outfile=${1%%.*}
+    echo ${outfile}
+    gcc -fopenmp -O2 -std=gnu18 -Wall -Wno-pointer-sign -Werror=vla -o ${outfile} ${1}
+}
+
+
 # alias cmcprintgcc='echo "gcc -m32 -fsanitize=address,undefined,signed-integer-overflow -O2 -std=gnu18 -Wall -Werror -Wno-pointer-sign -Werror=vla -lm"'
 
 # Compilation func for C in sem 3
