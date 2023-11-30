@@ -103,3 +103,6 @@ require('lspconfig')['clangd'].setup {
 require('lspconfig')['marksman'].setup {
     capabilities = capabilities
 }
+require('lspconfig')['texlab'].setup {
+    capabilities = capabilities
+}

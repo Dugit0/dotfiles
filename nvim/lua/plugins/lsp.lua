@@ -6,6 +6,7 @@ local lspconfig = require('lspconfig')
 lspconfig.pyright.setup {}       -- Python LSP
 lspconfig.clangd.setup {}        -- C/C++ LSP
 lspconfig.marksman.setup {}      -- Markdown LSP
+lspconfig.texlab.setup {}       -- Python LSP
 
 
 ---------------------------------------------------
