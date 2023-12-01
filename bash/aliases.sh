@@ -5,6 +5,7 @@ if [ ! -e "$HOME/.scripts/data/cur_dir.txt" ]; then
 fi
 
 alias ls='ls -l --color'
+alias rm='rm -v'
 alias lf='lfcd'
 alias scd='pwd -P > ~/.scripts/data/cur_dir.txt'
 alias pcd='cat ~/.scripts/data/cur_dir.txt'
