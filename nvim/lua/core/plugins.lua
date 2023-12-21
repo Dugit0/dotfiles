@@ -66,7 +66,17 @@ require("lazy").setup({
         opts = {} -- this is equalent to setup({}) function
     },
     -- Fast comment
-    {'terrortylor/nvim-comment'},
+    {
+        'numToStr/Comment.nvim',
+        -- opts = {
+        --     -- add any options here
+        -- },
+        lazy = false,
+    },
+
+    -- Old fast comment
+    -- {'terrortylor/nvim-comment'},
+    
     -- vim-airlines analog
     {
         'nvim-lualine/lualine.nvim',
