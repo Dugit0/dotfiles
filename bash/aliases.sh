@@ -30,6 +30,11 @@ function cmcgcc_omp() {
 
 alias cmcprintgcc='echo "-fopenmp -O2 -std=c99 -Wall -Werror=vla -lm"'
 
+function cmcmpi() {
+    outfile=${1%%.*}
+    echo ${outfile}
+    mpicc -o "${outfile}.out" ${1}
+}
 # alias cmcprintgcc='echo "gcc -m32 -fsanitize=address,undefined,signed-integer-overflow -O2 -std=gnu18 -Wall -Werror -Wno-pointer-sign -Werror=vla -lm"'
 
 # Compilation func for C in sem 3
