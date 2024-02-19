@@ -9,7 +9,7 @@ import datetime
 #     print("Missing command line argument", file=sys.stderr)
 #     sys.exit(1)
 
-base_path = "/home/dmitry/My_files/IT/Sem5/pythonprac"
+base_path = "/home/dmitry/My_files/IT/Sem6/pythonprac_sem6"
 cur_date = datetime.datetime.now()
 format_date = cur_date.strftime("%Y%m%d")
 contest_dir = os.path.join(base_path, format_date)
