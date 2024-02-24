@@ -3,10 +3,11 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 -- Sntup language servers.
 local lspconfig = require('lspconfig')
-lspconfig.pyright.setup {}       -- Python LSP
-lspconfig.clangd.setup {}        -- C/C++ LSP
-lspconfig.marksman.setup {}      -- Markdown LSP
-lspconfig.texlab.setup {}       -- Python LSP
+lspconfig.pyright.setup {}         -- Python LSP
+lspconfig.clangd.setup {}          -- C/C++ LSP
+lspconfig.marksman.setup {}        -- Markdown LSP
+lspconfig.texlab.setup {}          -- LaTeX LSP
+lspconfig.rust_analyzer.setup {}   -- Rust LSP
 
 
 ---------------------------------------------------
