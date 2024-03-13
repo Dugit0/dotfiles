@@ -15,6 +15,7 @@ alias bash_source='source ~/.bashrc'
 alias cmcmkcontest='python3 ~/.config/bash/scripts/gen_contest_files.py'
 alias cmctest='~/.config/bash/scripts/cmctest.sh'
 alias gitl='git log --graph --all --oneline'
+alias gitd='git diff HEAD'
 # alias cmcmkproblem='python3 ~/.config/bash/scripts/gen_problem_files.py'
 # alias cmcmktests='python3 ~/.config/bash/scripts/gen_tests_files.py'
 
