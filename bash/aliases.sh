@@ -47,12 +47,12 @@ function cmcmpi() {
 # }
 # -Werror -fsanitize=shadow-call-stack -pedantic -Wextra
 
-# Compilation func for C++ in sem 4
-# function cmcgcc() {
-#     outfile=${1%%.*}
-#     echo ${outfile}
-#     g++ -fsanitize=address,undefined,signed-integer-overflow,pointer-compare,pointer-subtract,leak,bounds,pointer-overflow -O2 -Wall -std=gnu++2b -lm -o ${outfile} ${1}
-# }
+# Compilation func for C++ in sem 6
+function cmcgcc() {
+    outfile=${1%%.*}
+    echo ${outfile}
+    g++ -fsanitize=address,undefined,signed-integer-overflow,pointer-compare,pointer-subtract,leak,bounds,pointer-overflow -O2 -Wall -Wextra -std=c++20 -lm -o ${outfile} ${1}
+}
 # -Werror
 
 
