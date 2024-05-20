@@ -43,19 +43,20 @@ vim.keymap.set('n', '|', ':vsplit<CR>')
 vim.keymap.set('n', '\\', ':split<CR>')
 
 -- Other
-vim.keymap.set('n', '<leader>w', ':w<CR>')
-vim.keymap.set('n', '<leader>x', ':BufferLinePickClose<CR>')
-vim.keymap.set('n', '<leader>X', ':BufferLineCloseRight<CR>')
-vim.keymap.set('n', '<leader>s', ':BufferLineSortByTabs<CR>')
--- vim.keymap.set('i', 'jj', '<Esc>')
-vim.keymap.set('i', 'jj', '<Esc>')
-vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
+vim.keymap.set('n', '<leader>w', ':w<CR>')           -- Сохранение
+-- vim.keymap.set('n', '<leader>x', ':BufferLinePickClose<CR>')
+-- vim.keymap.set('n', '<leader>X', ':BufferLineCloseRight<CR>')
+-- vim.keymap.set('n', '<leader>s', ':BufferLineSortByTabs<CR>')
+vim.keymap.set('i', 'jj', '<Esc>')                   -- Выход в normal mode через jj
+vim.keymap.set('i', '<A-i>', '<C-6>')                -- Переключение раскладки клавиатуры
+vim.keymap.set('n', '<A-i>', 'i<C-6><Esc>l')         -- Переключение раскладки клавиатуры
+-- vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 
 -- Tabs
 vim.keymap.set('n', '<Tab>', ':BufferLineCycleNext<CR>')
 vim.keymap.set('n', '<s-Tab>', ':BufferLineCyclePrev<CR>')
 
 -- Terminal
-vim.keymap.set('n', '<leader>tf', ':ToggleTerm direction=float<CR>')
-vim.keymap.set('n', '<leader>th', ':ToggleTerm direction=horizontal<CR>')
-vim.keymap.set('n', '<leader>tv', ':ToggleTerm direction=vertical size=40<CR>')
+-- vim.keymap.set('n', '<leader>tf', ':ToggleTerm direction=float<CR>')
+-- vim.keymap.set('n', '<leader>th', ':ToggleTerm direction=horizontal<CR>')
+-- vim.keymap.set('n', '<leader>tv', ':ToggleTerm direction=vertical size=40<CR>')
