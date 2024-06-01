@@ -36,7 +36,7 @@ vim.opt.mouse = "a"
 vim.opt.mousefocus = true
 
 -- Column
-vim.opt.colorcolumn = "120"
+vim.opt.colorcolumn = "80"
 
 -- Russian layaout
 vim.opt.keymap = "russian-jcukenwin"
