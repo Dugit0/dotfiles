@@ -16,6 +16,8 @@ bash/current_machine_settings.sh
 !lf/*
 !neofetch
 !neofetch/*
+!nixos
+!nixos/**
 !nvim/
 !nvim/*
 nvim/lazy-lock.json
