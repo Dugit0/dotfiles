@@ -1,0 +1,10 @@
+show=drun
+width=30%
+prompt=
+allow_images=true
+term=alacritty
+insensitive=false
+lines=8
+columns=1
+gtk_dark=true
+no_actions=true

@@ -8,6 +8,10 @@
 !bash/*
 !bash/scripts/*
 bash/current_machine_settings.sh
+!eww
+!eww/*
+!hypr
+!hypr/*
 !lf/
 !lf/*
 !neofetch
@@ -20,6 +24,8 @@ nvim/lazy-lock.json
 !nvim/lua/plugins/*
 !vim/
 !vim/*
+!wofi/
+!wofi/*
 !xonsh/
 !xonsh/*
 
