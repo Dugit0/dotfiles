@@ -6,25 +6,17 @@
 
 {
     imports = [
+        ./boot.nix
         ./system-packages.nix
+        ./env.nix
+        ./network.nix
     ];
     # I think it is already imported in flake.nix
     # imports =
     #     [ # Include the results of the hardware scan.
     #         ./hardware-configuration.nix
     #     ];
-
-    boot.supportedFilesystems = [ "ntfs" ];
-
-    # Use the systemd-boot EFI boot loader.
-    boot.loader.systemd-boot.enable = true;
-    boot.loader.efi.canTouchEfiVariables = true;
     
-    # Define your hostname.
-    networking.hostName = "ThinkPadE15";
-    
-    networking.networkmanager.enable = true;
-
     # Set your time zone.
     time.timeZone = "Europe/Moscow";
 

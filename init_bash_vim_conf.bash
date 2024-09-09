@@ -1,4 +1,4 @@
-#!/bin/bash
+# #!/bin/bash
 touch "$HOME/.vimrc"
 echo 'source ~/.config/vim/vimrc' > "$HOME/.vimrc"
 # cat "$HOME/.vimrc"
