@@ -35,6 +35,7 @@
 
         # WM and stuff
         hyprland
+        hyprpanel
         waybar
         wofi
         brightnessctl
