@@ -50,8 +50,8 @@ function cmcmpi() {
 # Compilation func for C++ in sem 6
 function cmcgcc() {
     outfile=${1%%.*}
-    echo ${outfile}
-    g++ -fsanitize=address,undefined,signed-integer-overflow,pointer-compare,pointer-subtract,leak,bounds,pointer-overflow -O2 -Wall -Wextra -std=c++20 -lm -o ${outfile} ${1}
+    echo "${outfile}.out"
+    g++ -fsanitize=address,undefined,signed-integer-overflow,pointer-compare,pointer-subtract,leak,bounds,pointer-overflow -O2 -Wall -Wextra -std=c++20 -lm -o "${outfile}.out" ${1}
 }
 # -Werror
 
