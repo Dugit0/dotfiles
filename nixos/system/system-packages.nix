@@ -9,22 +9,28 @@
 
 
         # CLI utils
-        neofetch
-        tree
-        htop
-        zip
-        # unzip
+        bat
         lf
+        htop
+        neofetch
+        speedtest-cli
+        tree
+        zip
+        unzip
 
         # bluez
         # bluez-tools
 
         # Base coding utils
-        libclang
+        # libclang
         texlive.combined.scheme-full
         gnumake
         gcc
         python312
+
+        # neovim dependencies
+        nodejs # for pyright
+        tree-sitter # for some specific grammar (latex and etc.)
         
         git
         vim
