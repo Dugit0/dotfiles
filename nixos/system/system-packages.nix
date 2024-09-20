@@ -21,6 +21,7 @@
 
         # Base coding utils
         libclang
+        texlive.combined.scheme-full
         gnumake
         gcc
         python312
