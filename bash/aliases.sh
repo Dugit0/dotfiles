@@ -30,7 +30,7 @@ function cmcML() {
 function cmcgcc() {
     outfile=${1%%.*}
     echo ${outfile}
-    gcc -m32 -fsanitize=address,undefined,signed-integer-overflow,pointer-compare,pointer-subtract,leak,bounds,pointer-overflow -O2 -std=gnu18 -Wall -Wextra -Wno-pointer-sign -Werror=vla -lm -o ${outfile} ${1}
+    gcc -fsanitize=address,undefined,signed-integer-overflow,pointer-compare,pointer-subtract,leak,bounds,pointer-overflow -O2 -std=gnu18 -Wall -Wextra -Wno-pointer-sign -Werror=vla -lm -o ${outfile} ${1}
 }
 # -Werror -fsanitize=shadow-call-stack -pedantic
 
