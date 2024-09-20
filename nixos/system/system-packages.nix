@@ -20,6 +20,7 @@
         # bluez-tools
 
         # Base coding utils
+        libclang
         gnumake
         gcc
         python312
@@ -35,7 +36,8 @@
 
         # WM and stuff
         hyprland
-        hyprpanel
+        hyprlock
+        hypridle
         waybar
         wofi
         brightnessctl
