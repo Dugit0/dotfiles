@@ -1,9 +1,3 @@
-# Create ~/.scripts/data/cur_dir.txt if it doesn't exist
-if [ ! -e "$HOME/.scripts/data/cur_dir.txt" ]; then
-    mkdir -p "$HOME/.scripts/data"
-    touch "$HOME/.scripts/data/cur_dir.txt"
-fi
-
 alias ls='ls -l --color'
 alias rm='rm -v'
 alias lf='lfcd'

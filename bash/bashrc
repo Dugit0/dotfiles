@@ -9,14 +9,24 @@ if [ -f "$LFCD" ]; then
     source "$LFCD"
 fi
 
-source ~/.config/bash/aliases.sh
-source ~/.config/bash/poetry_completion.sh
+# Create ~/.scripts/data/cur_dir.txt if it doesn't exist
+# Need for aliases scd, dcd, pcd
+if [ ! -e "$HOME/.scripts/data/cur_dir.txt" ]; then
+    mkdir -p "$HOME/.scripts/data"
+    touch "$HOME/.scripts/data/cur_dir.txt"
+fi
 
-if [ -f "$HOME/Prog/gitstatus/gitstatus.prompt.sh" ]; then
-    source "$HOME/Prog/gitstatus/gitstatus.prompt.sh"
+# Install gitstatus if it isn't installed
+if [ -f "$HOME/.scripts/gitstatus/gitstatus.prompt.sh" ]; then
+    source "$HOME/.scripts/gitstatus/gitstatus.prompt.sh"
+else
+    echo "ERROR: gitstatus isn't installed. Install it with command:"
+    echo "git clone --depth=1 https://github.com/romkatv/gitstatus.git ~/.scripts/gitstatus"
 fi
 
 
+source ~/.config/bash/aliases.sh
+source ~/.config/bash/poetry_completion.sh
 
 
 
