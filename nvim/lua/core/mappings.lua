@@ -16,10 +16,10 @@ vim.keymap.set('n', '<leader>o', ':Neotree float git_status<CR>')
 
 -- LSP
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
-vim.keymap.set('n', '<leader>ld', ':lua vim.diagnostic.open_float<CR>')
+vim.keymap.set('n', '<leader>ld', ':lua vim.diagnostic.open_float()<CR>')
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
-vim.keymap.set('n', '<leader>lD', ':lua vim.diagnostic.setloclist<CR>')
+vim.keymap.set('n', '<leader>lD', ':lua vim.diagnostic.setloclist()<CR>')
 -- А еще какие-то мапинги лежат в plugin/lsp.lua... Это нужно исправить!
 
 
