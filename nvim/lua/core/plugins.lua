@@ -74,9 +74,6 @@ require("lazy").setup({
         lazy = false,
     },
 
-    -- Old fast comment
-    -- {'terrortylor/nvim-comment'},
-    
     -- vim-airlines analog
     {
         'nvim-lualine/lualine.nvim',
@@ -85,16 +82,11 @@ require("lazy").setup({
             'linrongbin16/lsp-progress.nvim'
         }
     },
-    -- Autoformat
-    -- {'jose-elias-alvarez/null-ls.nvim'},
+    {
+          "cappyzawa/trim.nvim",
+          opts = {}
+    },
 
-
-    -- Buffer line (with tabpage integration)
-    -- Я ебал настройку этого говна
-    -- Короче, разобраться как это работает
-    -- Это вкладки вверху окна для работы с разными файлами
-    -- {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
-    
     {
         "folke/which-key.nvim",
         event = "VeryLazy",
@@ -108,9 +100,21 @@ require("lazy").setup({
             -- refer to the configuration section below
         }
     },
+
+
+    -- Autoformat
+    -- {'jose-elias-alvarez/null-ls.nvim'},
+
+
+    -- Buffer line (with tabpage integration)
+    -- Я ебал настройку этого говна
+    -- Короче, разобраться как это работает
+    -- Это вкладки вверху окна для работы с разными файлами
+    -- {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
+
     -- Syntax for Lark (.lark) (parsing lib for Python)
     {'lark-parser/vim-lark-syntax'}
-    
+
 })
 
 

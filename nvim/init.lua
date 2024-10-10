@@ -16,6 +16,7 @@ require("plugins.mason-lspconfig")
 require("plugins.autopairs")
 require("plugins.comments")
 require("plugins.lualine")
+require("plugins.trim")
 --[[
 require("plugins.nullls")
 require("plugins.gitsigns")
