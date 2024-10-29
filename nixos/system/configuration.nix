@@ -7,18 +7,19 @@
 {
     imports = [
         ./boot.nix
-        ./system-packages.nix
+        ./display-manager.nix
         ./env.nix
+        ./hyprland.nix
         ./network.nix
         ./security.nix
-        # ./hyprland.nix
+        ./system-packages.nix
     ];
     # I think it is already imported in flake.nix
     # imports =
     #     [ # Include the results of the hardware scan.
     #         ./hardware-configuration.nix
     #     ];
-    
+
     # Set your time zone.
     time.timeZone = "Europe/Moscow";
 
@@ -38,7 +39,7 @@
     # services.xserver.enable = true;
 
 
-    
+
 
     # Configure keymap in X11
     # services.xserver.xkb.layout = "us";
@@ -81,7 +82,7 @@
 
     # List packages installed in system profile. To search, run:
     # $ nix search wget
-    
+
 
     # Some programs need SUID wrappers, can be configured further or are
     # started in user sessions.
@@ -127,4 +128,3 @@
     system.stateVersion = "24.05"; # Did you read the comment?
 
 }
-

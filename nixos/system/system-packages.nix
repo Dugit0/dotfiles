@@ -1,4 +1,10 @@
 { pkgs, ... }: {
+    # programs.nix-ld.enable = true;
+    # programs.nix-ld.libraries = with pkgs; [
+    #     # Add any missing dynamic libraries for unpackaged programs
+    #     # here, NOT in environment.systemPackages
+    #     clangd
+    # ];
     environment.systemPackages = with pkgs; [
         # Desktop apps
         alacritty
@@ -10,6 +16,8 @@
 
         # CLI utils
         bat
+        cmatrix
+        gotop
         lf
         htop
         neofetch
@@ -21,17 +29,29 @@
         # bluez
         # bluez-tools
 
+        # Display manager
+        greetd.tuigreet
+
         # Base coding utils
-        # libclang
         texlive.combined.scheme-full
         gnumake
-        gcc
+        gcc14
+        glibc
         python312
+        cmake
+        openssl
+
+        # C libraries
+        # ncurses # lib for FrBrGeorge course LinuxDevelopment
 
         # neovim dependencies
-        nodejs # for pyright
-        tree-sitter # for some specific grammar (latex and etc.)
-        
+        nodejs          # for pyright
+        tree-sitter     # for some specific grammar (latex and etc.)
+        clang-tools     # NOTE: make sure mason.nvim don't install clangd
+        marksman        #
+        ripgrep         # for telescope live-grep
+        fd              # for telescope (optional)
+
         git
         vim
         wget
@@ -45,10 +65,15 @@
         hyprland
         hyprlock
         hypridle
+        # hyprpaper
+        # hyprpicker
+        # pyprland
+        # hyprcursor
         waybar
         wofi
         brightnessctl
         swww
+
         # rofi
 
         # Network
