@@ -9,6 +9,7 @@
         ./boot.nix
         ./display-manager.nix
         ./env.nix
+        ./games.nix
         ./hyprland.nix
         ./network.nix
         ./security.nix
