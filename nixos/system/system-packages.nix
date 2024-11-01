@@ -71,14 +71,14 @@
         hyprland
         hyprlock
         hypridle
-        # hyprpaper
+        hyprpaper
         # hyprpicker
         # pyprland
         # hyprcursor
+        wlogout
         waybar
         wofi
         brightnessctl
-        swww
 
         # rofi
 
