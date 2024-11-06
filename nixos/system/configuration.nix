@@ -11,40 +11,17 @@
         ./env.nix
         ./games.nix
         ./hyprland.nix
+        ./i18n.nix
         ./network.nix
         ./security.nix
         ./system-packages.nix
+        ./time.nix
     ];
     # I think it is already imported in flake.nix
     # imports =
     #     [ # Include the results of the hardware scan.
     #         ./hardware-configuration.nix
     #     ];
-
-    # Set your time zone.
-    time.timeZone = "Europe/Moscow";
-
-    # Configure network proxy if necessary
-    # networking.proxy.default = "http://user:password@proxy:port/";
-    # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-    # Select internationalisation properties.
-    i18n.defaultLocale = "en_US.UTF-8";
-    console = {
-        font = "Lat2-Terminus16";
-        # keyMap = "us";
-        useXkbConfig = true; # use xkb.options in tty.
-    };
-
-    # Enable the X11 windowing system.
-    # services.xserver.enable = true;
-
-
-
-
-    # Configure keymap in X11
-    # services.xserver.xkb.layout = "us";
-    # services.xserver.xkb.options = "eurosign:e,caps:escape";
 
     # Enable CUPS to print documents.
     # services.printing.enable = true;
