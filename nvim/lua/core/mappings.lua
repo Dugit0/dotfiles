@@ -49,7 +49,7 @@ vim.keymap.set('n', '<leader>w', ':w<CR>')           -- Сохранение
 -- vim.keymap.set('n', '<leader>s', ':BufferLineSortByTabs<CR>')
 vim.keymap.set('i', 'jj', '<Esc>')                   -- Выход в normal mode через jj
 vim.keymap.set('i', '<A-i>', '<C-6>')                -- Переключение раскладки клавиатуры
-vim.keymap.set('n', '<A-i>', 'i<C-6><Esc>l')         -- Переключение раскладки клавиатуры
+vim.keymap.set('n', '<A-i>', 'a<C-6><Esc>')         -- Переключение раскладки клавиатуры
 -- vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 
 -- Tabs
