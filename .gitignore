@@ -28,3 +28,4 @@ nvim/lazy-lock.json
 !wofi/**
 !xonsh/
 !xonsh/**
+!TODO.md
