@@ -1,6 +1,8 @@
 *
 !.gitignore
 !init_bash_vim_conf.bash
+!mimeapps.list
+!TODO.md
 
 !alacritty/
 !alacritty/**
@@ -28,4 +30,3 @@ nvim/lazy-lock.json
 !wofi/**
 !xonsh/
 !xonsh/**
-!TODO.md
