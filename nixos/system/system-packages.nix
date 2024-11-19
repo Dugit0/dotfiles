@@ -47,6 +47,9 @@
         cmake
         openssl
 
+        # Qt
+        qt6.qtwayland
+
         # C libraries
         # ncurses # lib for FrBrGeorge course LinuxDevelopment
 
