@@ -1,7 +1,7 @@
 alias ls='ls -l --color'
 alias rm='rm -v'
 alias lf='lfcd'
-alias v='nvim'
+alias v=$EDITOR
 alias rebuild='sudo nixos-rebuild switch --flake ~/.config/nixos'
 alias rebuild_test='sudo nixos-rebuild test --flake ~/.config/nixos'
 alias rmzone='find ~/ -name "*:Zone.Identifier" -type f -delete'
