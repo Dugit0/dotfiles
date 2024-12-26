@@ -1,0 +1,29 @@
+{
+    services.syncthing = {
+        enable = true;
+        openDefaultPorts = true;
+        user = "dmitry";
+        configDir = "/home/dmitry/.config/syncthing";
+        settings = {
+            devices = {
+                "Home PC" = {
+                    id = "XXXXXXX-YYYYYYY-ZZZZZZZ";
+                };
+                "Phone A34" = {
+                    id = "AAAAAAA-BBBBBBB-CCCCCCC";
+                };
+            };
+            folders = {
+                "Obsidian" = {
+                    id = "nwnkn-dxd4g";
+                    path = "/home/dmitry/Obsidian";
+                    devices = [
+                        "Home PC"
+                        "Phone A34"
+                    ];
+                    ignorePerms = true;
+                };
+            };
+        };
+    };
+}

@@ -6,18 +6,22 @@
     #     clangd
     # ];
     nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+        # Steam
         "steam"
         "steam-original"
         "steam-unwrapped"
         "steam-run"
+
+        # Obsidian
+        "obsidian"
     ];
     environment.systemPackages = with pkgs; [
         # Desktop apps
         alacritty
         telegram-desktop
         brave
+        syncthing
         # discord
-        # obsidian
 
 
         # CLI utils

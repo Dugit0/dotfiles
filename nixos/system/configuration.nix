@@ -14,6 +14,7 @@
         ./i18n.nix
         ./network.nix
         ./security.nix
+        ./syncthing.nix
         ./system-packages.nix
         ./time.nix
     ];
