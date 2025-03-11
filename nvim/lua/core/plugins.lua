@@ -24,16 +24,20 @@ require("lazy").setup({
           "MunifTanjim/nui.nvim",
         }
     },
+
     -- nvim-treesitter - advanced highlighting
     {'nvim-treesitter/nvim-treesitter'},
+
     -- LSP - language server protocol
     {'neovim/nvim-lspconfig'},
+
     -- Colorschemes
     {'aryansh-s/fastdark.vim'},
     {'ellisonleao/gruvbox.nvim', priority = 1000},
     {'sainnhe/gruvbox-material'},
     -- {'sainnhe/everforest'},
     -- {'sainnhe/edge'},
+
     -- Snippet plugin
     {
         "L3MON4D3/LuaSnip",
@@ -42,6 +46,7 @@ require("lazy").setup({
         -- install jsregexp (optional!).
         -- build = "make install_jsregexp"
     },
+
     -- Autocomlete
     {'hrsh7th/cmp-nvim-lsp'},
     {'hrsh7th/cmp-buffer'},
@@ -51,6 +56,7 @@ require("lazy").setup({
     -- Autocomplete for LuaSnip
     {'L3MON4D3/LuaSnip'},
     {'saadparwaiz1/cmp_luasnip'},
+
     -- LSPs manager (also DAPs, linters and formatters manager)
     {"williamboman/mason.nvim"},
     {"williamboman/mason-lspconfig.nvim"},
@@ -59,6 +65,7 @@ require("lazy").setup({
         branch = '0.1.x',
         dependencies = {'nvim-lua/plenary.nvim'}
     },
+
     -- Autocomplete (, [, { and etc.
     {
         'windwp/nvim-autopairs',
@@ -68,9 +75,6 @@ require("lazy").setup({
     -- Fast comment
     {
         'numToStr/Comment.nvim',
-        -- opts = {
-        --     -- add any options here
-        -- },
         lazy = false,
     },
 
@@ -82,6 +86,7 @@ require("lazy").setup({
             'linrongbin16/lsp-progress.nvim'
         }
     },
+    -- Trim trailing whitespace and lines
     {
           "cappyzawa/trim.nvim",
           opts = {}
@@ -101,19 +106,25 @@ require("lazy").setup({
         }
     },
 
+    -- Syntax for Lark (.lark) (parsing lib for Python)
+    {'lark-parser/vim-lark-syntax'},
+
+    -- Terminal
+    {'akinsho/toggleterm.nvim', version = "*", config = true},
+
+
 
     -- Autoformat
-    -- {'jose-elias-alvarez/null-ls.nvim'},
-
+    -- {
+    --     'stevearc/conform.nvim',
+    --     opts = {},
+    -- }
 
     -- Buffer line (with tabpage integration)
     -- Я ебал настройку этого говна
     -- Короче, разобраться как это работает
     -- Это вкладки вверху окна для работы с разными файлами
     -- {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
-
-    -- Syntax for Lark (.lark) (parsing lib for Python)
-    {'lark-parser/vim-lark-syntax'}
 
 })
 
@@ -131,7 +142,6 @@ require("lazy").setup({
     },
     {'lewis6991/gitsigns.nvim'},
     {'nvim-tree/nvim-web-devicons'},
-    {'akinsho/toggleterm.nvim', version = "*", config = true},
     {'Djancyp/outline'},
     {'hrsh7th/cmp-nvim-lsp-signature-help'}, {
         'linrongbin16/lsp-progress.nvim',
