@@ -1,11 +1,13 @@
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
--- Setup language servers.
-vim.lsp.enable("pyright")         -- Python LSP
-vim.lsp.enable("clangd")          -- C/C++ LSP
-vim.lsp.enable("marksman")        -- Markdown LSP
-vim.lsp.enable("texlab")          -- LaTeX LSP
+-- Sntup language servers.
+local lspconfig = require('lspconfig')
+lspconfig.pyright.setup {}         -- Python LSP
+lspconfig.clangd.setup {}          -- C/C++ LSP
+lspconfig.marksman.setup {}        -- Markdown LSP
+lspconfig.texlab.setup {}          -- LaTeX LSP
+lspconfig.rust_analyzer.setup {}   -- Rust LSP
 
 
 ---------------------------------------------------

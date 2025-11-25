@@ -12,12 +12,14 @@ require("plugins.comments")
 require("plugins.gruvbox")
 require("plugins.lsp")
 require("plugins.lualine")
-require("plugins.mason-lspconfig")
 require("plugins.mason")
+require("plugins.mason-lspconfig")
 require("plugins.neotree")
 require("plugins.toggleterm")
 require("plugins.treesitter")
 require("plugins.trim")
+
+
 --[[
 require("plugins.buffline")
 require("plugins.nullls")

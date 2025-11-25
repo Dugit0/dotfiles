@@ -45,6 +45,8 @@ vim.opt.imsearch = 0
 -- vim.cmd("highlight Cursor guifg=NONE guibg=Green")
 -- vim.cmd("highlight lCursor guifg=NONE guibg=Cyan")
 
+-- LaTeX settings
+vim.g.tex_flavor='latex'
 
 
 
@@ -87,6 +89,3 @@ vim.opt.imsearch = 0
 
 -- vim.cmd([[highlight clear LineNr]])
 -- vim.cmd([[highlight clear SignColumn]])
-
-
-

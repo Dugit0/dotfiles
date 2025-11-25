@@ -24,7 +24,7 @@ cmp.setup({
         ["<Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_next_item()
-            -- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable() 
+            -- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable()
             -- they way you will only jump inside the snippet region
             elseif luasnip.expand_or_jumpable() then
                 luasnip.expand_or_jump()
@@ -91,21 +91,27 @@ cmp.setup.cmdline(':', {
 -- Set up lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
--- require('lspconfig')['<YOUR_LSP_SERVER>'].setup {
+-- vim.lsp.config('<YOUR_LSP_SERVER>', {
 --     capabilities = capabilities
--- }
-require('lspconfig')['pyright'].setup {
+-- })
+-- vim.lsp.enable('<YOUR_LSP_SERVER>')
+
+vim.lsp.config('pyright', {
     capabilities = capabilities
-}
-require('lspconfig')['clangd'].setup {
+})
+vim.lsp.enable('pyright')
+
+vim.lsp.config('clangd', {
     capabilities = capabilities
-}
-require('lspconfig')['marksman'].setup {
+})
+vim.lsp.enable('clangd')
+
+vim.lsp.config('marksman', {
     capabilities = capabilities
-}
-require('lspconfig')['texlab'].setup {
+})
+vim.lsp.enable('marksman')
+
+vim.lsp.config('texlab', {
     capabilities = capabilities
-}
-require('lspconfig')['rust_analyzer'].setup {
-    capabilities = capabilities
-}
+})
+vim.lsp.enable('texlab')
