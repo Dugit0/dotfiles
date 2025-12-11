@@ -14,6 +14,13 @@
 
         # Obsidian
         "obsidian"
+
+        # Discord
+        "discord"
+
+        # Rustdesk
+        "libsciter"
+
     ];
     environment.systemPackages = with pkgs; [
         # Desktop apps
@@ -21,7 +28,12 @@
         telegram-desktop
         brave
         syncthing
+        zathura
+        kdePackages.okular
+        obsidian
         # discord
+        # pkgs.rustdesk
+        rustdesk
 
 
         # CLI utils
@@ -91,6 +103,7 @@
 
         # Network
         networkmanager
+        wireguard-tools
     ];
     fonts.enableDefaultPackages = true;
     fonts.packages = with pkgs; [
