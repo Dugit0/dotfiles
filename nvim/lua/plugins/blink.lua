@@ -1,14 +1,22 @@
 return {
   "saghen/blink.cmp",
   opts = {
-    keymap = {
-      -- Отключаем встроенные пресеты, чтобы избежать конфликтов
-      preset = "none",
+    -- Настройка автоматического выбора первого элемента
+    completion = {
+      list = {
+        selection = {
+          preselect = false, -- Отключаем "тихую" подсветку без фокуса
+          auto_insert = true, -- Включаем автоматическую подстановку при фокусе
+        },
+      },
+    },
 
-      -- Настраиваем поведение клавиш вручную под классический Super-tab
+    keymap = {
+      preset = "none",
       ["<Tab>"] = {
         function(cmp)
           if cmp.is_visible() then
+            -- Теперь select_next() на первом шаге выберет именно первый элемент
             return cmp.select_next()
           elseif cmp.snippet_active() then
             return cmp.snippet_forward()
@@ -33,7 +41,6 @@ return {
         "fallback",
       },
 
-      -- Опционально: другие привычные клавиши управления меню
       ["<CR>"] = { "accept", "fallback" },
       ["<Esc>"] = { "hide", "fallback" },
       ["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
