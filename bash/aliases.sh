@@ -18,11 +18,23 @@ alias gitd='git diff HEAD'
 # alias cmcmkproblem='python3 ~/.config/bash/scripts/gen_problem_files.py'
 # alias cmcmktests='python3 ~/.config/bash/scripts/gen_tests_files.py'
 
+# Функция для перманентной загрузки .env в текущую сессию
+function loadenv() {
+    local env_file="${1:-.env}"
+    if [ -f "$env_file" ]; then
+        set -a
+        source "$env_file"
+        set +a
+        echo "Variables from $env_file was loaded"
+    else
+        echo "Error: file $env_file not found"
+    fi
+}
+
 function cmcML() {
     cd '/home/dmitry/My_files/IT/Sem5/cmc_ML_2023-24'
     source 'venv/bin/activate'
 }
-
 
 # Compilation func for C
 function cmcgcc() {
